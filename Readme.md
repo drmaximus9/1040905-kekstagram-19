@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Максим  Булатов](https://up.htmlacademy.ru/javascript/19/user/1040905).
-* Наставник: `Неизвестно`.
+* Наставник: [Лариса Клец] (https://htmlacademy.ru/profile/id336227).
 
 ---
 
