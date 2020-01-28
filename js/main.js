@@ -30,198 +30,38 @@ var getFullName = function () {
   return fullName;
 };
 
-var USER_COMMENTS = [
-  {
-    avatar: 'img/avatar-' + getRandNumber(1, 6) + '.svg',
-    message: getRandElement(USER_MESSAGES),
-    name: getFullName()
-  },
-  {
-    avatar: 'img/avatar-' + getRandNumber(1, 6) + '.svg',
-    message: getRandElement(USER_MESSAGES),
-    name: getFullName()
-  },
-  {
-    avatar: 'img/avatar-' + getRandNumber(1, 6) + '.svg',
-    message: getRandElement(USER_MESSAGES),
-    name: getFullName()
-  },
-  {
-    avatar: 'img/avatar-' + getRandNumber(1, 6) + '.svg',
-    message: getRandElement(USER_MESSAGES),
-    name: getFullName()
-  },
-  {
-    avatar: 'img/avatar-' + getRandNumber(1, 6) + '.svg',
-    message: getRandElement(USER_MESSAGES),
-    name: getFullName()
-  },
-  {
-    avatar: 'img/avatar-' + getRandNumber(1, 6) + '.svg',
-    message: getRandElement(USER_MESSAGES),
-    name: getFullName()
+var PHOTOS_COUNT = 25;
+var userPhotos = [];
+
+for (var i = 1; i <= PHOTOS_COUNT; i++) {
+  var commentCount = getRandNumber(1, 20);
+  var usersComments = [];
+
+  for (var j = 0; j < commentCount; j++) {
+    var comment = {
+      avatar: 'img/avatar-' + j + '.svg',
+      message: getRandElement(USER_MESSAGES),
+      name: getFullName()
+    };
+
+    usersComments.push(comment);
   }
-];
 
+  var photo = {
+    url: 'photos/' + i + '.jpg',
+    description: '',
+    likes: getRandNumber(15, 200),
+    comments:usersComments
+  };
 
-var userPhotos = [
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-  {
-    url: 'photos/' + getRandNumber(1, 25) + '.jpg',
-    description: '',
-    likes: getRandNumber(15, 200),
-    comments: getRandElement(USER_COMMENTS)
-  },
-];
+  userPhotos.push(photo);
+}
 
 var renderPicture = function (picture) {
   var pictureElement = pictureTemplate.cloneNode(true);
 
   pictureElement.querySelector('.picture__img').src = picture.url;
-  pictureElement.querySelector('.picture__comments').textContent = picture.comments;
+  pictureElement.querySelector('.picture__comments').textContent = picture.comments.length;
   pictureElement.querySelector('.picture__likes').textContent = picture.likes;
 
   return pictureElement;
