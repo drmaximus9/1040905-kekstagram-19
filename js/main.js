@@ -51,7 +51,7 @@ for (var i = 1; i <= PHOTOS_COUNT; i++) {
     url: 'photos/' + i + '.jpg',
     description: '',
     likes: getRandNumber(15, 200),
-    comments:usersComments
+    comments: usersComments
   };
 
   userPhotos.push(photo);
